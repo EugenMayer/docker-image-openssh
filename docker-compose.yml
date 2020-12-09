@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  openssh:
+    image: eugenmayer/openssh
+    hostname: alpine
+    ports:
+      - '2222:22'
+    volumes:
+      - ./test/ssh-keys:/root/.ssh/keys
+    restart: always
